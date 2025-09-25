@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Web Pribadi — Muhammad Riski</title>
+  <meta name="description" content="Web pribadi Muhammad Riski — portfolio, tentang saya, proyek, dan kontak.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; /* dark navy */
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#4f46e5;
+      --accent-2:#06b6d4;
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg,var(--bg), #031024 120%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      padding:32px;
+    }
+    .container{max-width:1000px;margin:0 auto}
+
+    header{
+      display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;
+    }
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;box-shadow:0 6px 18px rgba(79,70,229,0.18)}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+    nav a:hover{color:#fff}
+
+    .hero{
+      display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start;margin-bottom:28px
+    }
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:26px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(2,6,23,0.7)}
+
+    .intro h1{margin:0 0 8px;font-size:28px}
+    .intro p{margin:0;color:var(--muted)}
+    .cta{margin-top:18px;display:flex;gap:12px}
+    .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    .profile{display:flex;flex-direction:column;gap:18px}
+    .avatar{width:100%;height:250px;border-radius:12px;background:linear-gradient(180deg,#10204a,#062034);display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--muted)}
+    .stats{display:flex;gap:12px}
+    .stat{flex:1;background:var(--glass);padding:12px;border-radius:10px;text-align:center}
+    .stat b{display:block;font-size:18px}
+
+    section h2{margin:0 0 12px}
+    .about p{color:var(--muted)}
+
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .project{padding:14px;background:rgba(255,255,255,0.02);border-radius:12px}
+    .project h3{margin:0 0 8px;font-size:16px}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      .avatar{height:180px}
+    }
+
+    /* small utilities */
+    .tag{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);font-size:13px;color:var(--muted)}
+
+    /* contact form */
+    form{display:grid;gap:10px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:10px;color:inherit}
+    textarea{min-height:110px;resize:vertical}
+    .inline{display:flex;gap:8px}
+
+    /* small link */
+    a.small{font-size:13px;color:var(--muted);text-decoration:none}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">MR</div>
+        <div>
+          <div style="font-weight:700">Muhammad Riski</div>
+          <div style="font-size:13px;color:var(--muted)">Web Pribadi • Portfolio</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">Tentang</a>
+        <a href="#projects">Proyek</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="card intro">
+          <h1>Halo — saya Muhammad Riski</h1>
+          <p>Pengembang web &amp; mahasiswa. Saya membuat aplikasi web sederhana, desain antarmuka, dan dokumentasi teknis.</p>
+          <div class="cta">
+            <a class="btn" href="#contact">Hubungi Saya</a>
+            <a class="btn secondary" href="#projects">Lihat Proyek</a>
+          </div>
+
+          <div style="margin-top:18px">
+            <h2>Keahlian</h2>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card profile">
+          <div class="avatar">Foto / Avatar (ganti dengan foto Anda)</div>
+          <div class="stats">
+            <div class="stat"><b>5+</b><span style="color:var(--muted);font-size:13px">Proyek</span></div>
+            <div class="stat"><b>2</b><span style="color:var(--muted);font-size:13px">Pengalaman</span></div>
+          </div>
+          <div style="font-size:13px;color:var(--muted)">Lokasi: Indonesia</div>
+        </aside>
+      </section>
+
+      <section id="about" class="card about" style="margin-bottom:12px">
+        <h2>Tentang Saya</h2>
+        <p>Saya seorang pengembang yang tertarik pada pembuatan aplikasi web sederhana, optimasi antarmuka, dan dokumentasi. Saya senang belajar teknologi baru dan bekerja pada proyek yang memberikan manfaat nyata bagi pengguna.</p>
+
+        <div style="margin-top:12px">
+          <h3>Pengalaman Pendidikan</h3>
+          <p class="small" style="color:var(--muted);margin:6px 0">Mahasiswa / Pelatihan terkait teknologi informasi</p>
+        </div>
+      </section>
+
+      <section id="projects" style="margin-bottom:12px">
+        <h2 style="margin-bottom:12px">Proyek</h2>
+        <div class="projects">
+          <article class="project card">
+            <h3>Aplikasi Topologi Star</h3>
+            <p>Membuat web simulasi topologi star untuk menyambungkan perangkat (HP & laptop) — termasuk dokumentasi dan contoh database sederhana.</p>
+            <div style="margin-top:8px"><a class="small" href="#">Detail</a></div>
+          </article>
+
+          <article class="project card">
+            <h3>Portfolio Web</h3>
+            <p>Template personal portfolio yang responsif dan mudah dikustomisasi.</p>
+            <div style="margin-top:8px"><a class="small" href="#">Live</a></div>
+          </article>
+
+          <article class="project card">
+            <h3>Blog Teknis</h3>
+            <p>Platform sederhana untuk menulis artikel dan panduan teknis.</p>
+            <div style="margin-top:8px"><a class="small" href="#">Baca</a></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="card" style="margin-bottom:12px">
+        <h2>Kontak</h2>
+        <p style="color:var(--muted);margin-bottom:12px">Isi formulir ini atau klik tautan email untuk langsung mengirim pesan.</p>
+        <form onsubmit="handleSubmit(event)">
+          <input type="text" id="name" placeholder="Nama Anda" required>
+          <input type="email" id="email" placeholder="Email" required>
+          <textarea id="message" placeholder="Pesan" required></textarea>
+          <div class="inline">
+            <button class="btn" type="submit">Kirim Pesan</button>
+            <a class="btn secondary" href="mailto:youremail@example.com">Email Langsung</a>
+          </div>
+        </form>
+        <div id="note" style="margin-top:8px;color:var(--muted);font-size:13px"></div>
+      </section>
+
+      <footer>
+        © <span id="year"></span> Muhammad Riski — Dibuat dengan ❤️
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // Simple client-side form handler (no backend).
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const note = document.getElementById('note');
+      if(!name || !email || !message){
+        note.textContent = 'Isi semua kolom sebelum mengirim.';
+        return;
+      }
+      // For now we just prepare a mailto link so user can send via email client.
+      const subject = encodeURIComponent('Pesan dari web pribadi: ' + name);
+      const body = encodeURIComponent('Nama: '+name+'\nEmail: '+email+'\n\n'+message);
+      const mailto = 'mailto:youremail@example.com?subject='+subject+'&body='+body;
+      note.innerHTML = 'Klik <a href="'+mailto+'">di sini</a> jika email tidak terbuka otomatis.';
+      window.location.href = mailto;
+    }
+
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
